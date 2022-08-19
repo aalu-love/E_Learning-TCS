@@ -1,0 +1,133 @@
+ <html>
+ <head>
+ <title></title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/style.css"/>
+ <script src="js/validation.js"></script>
+ <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+ <header>
+ <nav class="navbar navbar-inverse" style="border-radius:0px;margin-bottom:0px;">
+  <div class="container-fluid" style="">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="home.php">E-Learning Logo</a>
+    </div>
+    <ul class="nav navbar-nav" style="float:right;">
+      <li><a href="home.php">Home</a></li>
+      <li><a href="professor.php">Professors</a></li>
+      <li><a href="about_us.php">About Us</a></li>
+      <li><a href="contact_us.php">Contact Us</a></li>
+      <li><a href="#" onclick="document.getElementById('register').style.display='block'">Signup</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="document.getElementById('log_page_t').style.display='block'">Teacher Login</a></li>
+          <li><a href="#" onclick="document.getElementById('log_page_s').style.display='block'">Student Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+ </header>
+ <body>
+          <div style="display:none;" id="log_page_t" class="sarala">
+            <form action="login_teacher.php" class="form_tab" method="POST">
+                <div class="login_body" style="width:80%;">
+                <h4 style="font-size:22px;">Teacher Login</h4>
+                <div class="input_tab">
+                <p><label>Email:</label><input class="form-control" type="text" name="email_t"/></p>
+                <p><label>Password:</label><input class="form-control" type="password" name="pass_t"/></p>
+                <p><button class="btn btn-primary" type="submit" name="Submit">Submit</button></p>
+                </div>
+                </div>
+           </form>
+        </div>
+          <div style="display:none;" id="log_page_s" class="sarala">
+            <form action="login_student.php" class="form_tab" method="POST">
+                <div class="login_body" style="width:80%;">
+                <h4 style="font-size:22px;">Student Login</h4>
+                <div class="input_tab">
+                <p><label>Email:</label><input class="form-control" type="text" name="email_s"/></p>
+                <p><label>Password:</label><input class="form-control" type="password" name="pass_s"/></p>
+                <p><button class="btn btn-primary" type="submit" name="Submit">Submit</button></p>
+                </div>
+                </div>
+           </form>
+        </div>
+        <div style="display:none;" id="register" class="sarala">
+<form name="myForm" action="register.php" class="form_tab" method="POST" onsubmit="return validateForm()">
+  <h4 style="font-size:22px;">Register</h4>
+<table>
+  <tr>
+    <td>Name:</td>
+    <td><input type="text" id="usrname" name="username"></td>
+  </tr>
+  <tr>
+    <td>Course:</td>
+    <td><select id="course" name="courses">
+      <option selected="" value="">Select an option</option>
+      <option value="JEE">JEE</option>
+      <option value="NIMCET">NIMCET</option>
+      <option value="NEET">NEET</option>
+    </select></tr>
+  <tr>
+    <td>Phone:</td>
+    <td><input type="number" id="phone" name="phoneno"></td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><input type="text" id="mail" name="email"></td>
+  </tr>
+  <tr>
+    <td>Password:</td>
+    <td><input type="password" id="password" name="pass"></td>
+  </tr>
+    <tr>
+    <td>Confirm Password:</td>
+    <td><input type="password" id="con_password"></td>
+  </tr>
+</table>
+<button type="submit" class="btn btn-primary" style="margin-top:10px; " name="Submit">Submit</button>
+</form>
+      </div>
+<script>
+// Get the modal
+var modal_s = document.getElementById('log_page_s');
+var modal_t = document.getElementById('log_page_t');
+var modal_r = document.getElementById('register');
+
+window.onclick = function(event) {
+    if (event.target == modal_s) {
+        modal_s.style.display = "none"; 
+    }
+    else if(event.target == modal_t)
+    {
+      modal_t.style.display = "none";
+    }
+    else if(event.target == modal_r)
+    {
+      modal_r.style.display = "none";
+    }
+}
+
+</script>
+ </body>
+</html>

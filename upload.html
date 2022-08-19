@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Assignment</title>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        input
+        {
+            width: 50%;
+            height: 5%;
+            border:1px;
+            border-radius: 5px;
+            padding: 8px 15px 8px 15px;
+            margin: 10px 0px 15px 0px;
+            box-shadow: 1px 1px 2px 1px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Add Assignment</h1>
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="description">
+        <label>Choose Assignment </label>
+        <input type="file" name="myfile" >
+        <input type="submit" name="upload " value="Upload Assignment">
+    </form>
+</center>
+</body>
+</html>
+

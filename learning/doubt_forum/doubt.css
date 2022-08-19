@@ -1,0 +1,107 @@
+#content
+	{
+		width: 70%;
+		margin: 20px auto;
+		border:1px solid #cbcbcb;
+
+	}
+form
+{
+	width: 90%;
+	margin: 20px auto;
+
+}
+form div
+{
+	margin-top: 5px; 
+}
+#img_div
+{
+	width: auto;
+	padding: 5px;
+	margin: 10px 0px;
+	border-style: outset;
+
+}
+
+#img_div img
+{
+	height: 60%;
+}
+
+#img_div:after
+{
+	content: "";
+	display: block;
+	clear: both;
+
+}
+.img_div1
+{ 	
+	border-radius: 8px;
+	padding: 5px;
+	height: 60px;
+	width:280px;
+	
+
+}
+.img_div1 .student
+{
+	border-radius: 8px;
+	margin: 5px;
+	width:50px;
+	height: 50px;
+	padding: 7px;
+
+}
+.img_div1 p
+{
+	padding: 2px;
+ font-size: 150%;
+
+
+}
+#p_div
+{
+	width: 50%;
+	padding: 5px;
+	margin: 15px auto;
+	 font-size: 180%;
+	
+
+	float: left;
+
+}
+#p_div:after
+{
+	content: "";
+	display: block;
+	clear: both;
+
+
+}
+img
+{
+	float: left;
+	margin: 5px;
+	max-width: 100%;
+	height: auto;
+
+}
+
+.forum
+{
+	width:auto;
+	height:auto;
+	margin-bottom: 15px;
+	margin-left:5px;
+	margin-right: 5px;
+}
+
+hr
+{
+	width: 98%;
+	margin-top: 8px;
+	padding-top: 2px;
+    background-color: #d1d1d1;
+}

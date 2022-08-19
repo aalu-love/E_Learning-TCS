@@ -1,0 +1,105 @@
+    .botnav
+    {
+      padding: 2px 5%;
+      text-decoration: none;
+      color: #9d9d9d;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .botnav2
+    {
+      text-align: center;
+      padding: 20px 0px;
+    }
+    .botnav:hover
+    {
+      color: #fff;
+      text-decoration: none;
+    }
+    .dropdown-menu
+    {
+    	min-width: 130px;
+    }
+
+    .navbar-nav
+    {
+    	float: right;
+    	padding-right:2%;
+    	font-size:18px;
+    }
+
+    .container-fluid
+    {
+    padding-top: 5px;
+    padding-bottom: 5px;
+	}
+
+    .sarala
+    {
+        position:fixed;
+        display:none;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,0.2);
+        z-index:2;
+    }
+
+    .form_tab
+    {
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:70px;
+        height:auto;
+        width:30%;
+        padding: 15px;
+        background-color:white;
+        border-radius:5px;
+        text-align:center;
+        box-shadow:2px 2px 5px 0px;
+    }
+
+    .input_tab
+    {
+        font-size:16px;
+    }
+
+    .input_tab label
+    {
+        padding:0px 5px;
+    }
+
+    .input_tab input
+    {
+        border-radius:2px;
+        border-color:aliceblue;
+    }
+
+    .login_btn
+    {
+        width:27%;
+        background-color:chartreuse;
+        border-color: aliceblue;
+        border-radius: 5px;
+    }
+
+    .login_btn:hover
+    {
+        color:black;
+        background-color:#6dda00;
+    }
+
+    .login_body
+    {
+        margin-left:auto;
+        margin-right:auto;
+        padding-top:10px;
+        height:30%;
+        width: 80%;
+        display:inline-block;
+    }

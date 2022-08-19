@@ -1,0 +1,116 @@
+ <html>
+ <head>
+ <title></title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+ <header>
+   
+ <nav class="navbar navbar-inverse" style="border-radius:0px;margin-bottom:0px;">
+  <div class="container-fluid" style="">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="\">E-Learning Logo</a>
+    </div>
+    <ul class="nav navbar-nav" style="float:right;">
+      <li><a href="home.php">Home</a></li>
+      <li><a href="about_us.php">About Us</a></li>
+      <li><a href="professor.php">Professors</a></li>
+      <li><a href="contact_us.php">Contact Us</a></li>
+      <li><a href="#" onclick="document.getElementById('register').style.display='block'">Signup</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="document.getElementById('log_page_t').style.display='block'">Teacher Login</a></li>
+          <li><a href="#" onclick="document.getElementById('log_page_s').style.display='block'">Student Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+ </header>
+ <body>
+          <div style="display:none;" id="log_page_t" class="sarala">
+            <form action="/action_page.php" class="form_tab">
+                <div class="login_body">
+                <h4 style="font-size:22px;">Teacher Login</h4>
+                <div class="input_tab">
+                <p><label>Username:</label><input type="text" id="usrname"/></p>
+                <p><label>Password:</label><input type="password" id="pass"/></p>
+                <p><input type="button" value="submit" class="login_btn"/></p>
+                </div>
+                </div>
+           </form>
+        </div>
+          <div style="display:none;" id="log_page_s" class="sarala">
+            <form action="/action_page.php" class="form_tab">
+                <div class="login_body">
+                <h4 style="font-size:22px;">Student Login</h4>
+                <div class="input_tab">
+                <p><label>Username:</label><input type="text" id="usrname"/></p>
+                <p><label>Password:</label><input type="password" id="pass"/></p>
+                <p><input type="button" value="submit" class="login_btn"/></p>
+                </div>
+                </div>
+           </form>
+        </div>
+        <div style="display:none;" id="register" class="sarala">
+        <form name="myForm" class="form_tab" action="#" method="POST" onsubmit="return validateForm()">
+          <h4 style="font-size:22px;text-align:center;">Student Login</h4>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" id="usrname"></td>
+          </tr>
+          <tr>
+            <td>Course:</td>
+            <td><select id="course">
+              <option selected="" value="">Select an option</option>
+              <option value="JEE">JEE</option>
+              <option value="NIMCET">NIMCET</option>
+              <option value="NEET">NEET</option>
+            </select></tr>
+          <tr>
+            <td>Phone:</td>
+            <td><input type="number" id="phone"></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="text" id="mail"></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" id="password"></td>
+          </tr>
+            <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" id="con_password"></td>
+          </tr>
+        </table>
+        <button type="submit" name="Submit">Submit</button>
+        </form>
+      </div>
+ </body>
+    
+<script>
+// Get the modal
+var modal_s = document.getElementById('log_page_s');
+var modal_t = document.getElementById('log_page_t');
+var modal_r = document.getElementById('register');
+
+window.onclick = function(event) {
+    if (event.target == modal_s) {
+        modal_s.style.display = "none"; 
+    }
+    else if(event.target == modal_t)
+    {
+      modal_t.style.display = "none";
+    }
+    else if(event.target == modal_r)
+    {
+      modal_r.style.display = "none";
+    }
+}
+
+</script>
+</html>
